@@ -1,0 +1,30 @@
+@page
+@model AddCustomerModel
+@{
+    ViewData["Title"] = "Add Customer";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" required/>
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        
+        <input asp-for="PhoneNumber" class="form-control" maxlength="12" pattern="\d{12}" title="Please enter a 12-digit number." />
+
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" >Add Customer</button>
+</form>
+<script>
+    
+</script>
